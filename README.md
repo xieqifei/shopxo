@@ -32,25 +32,25 @@ ShopXO是款非常优秀的开源商城软件。为了让商城更加适合没�
 
 ```php+HTML
 <td >
-								<button class="am-btn am-btn-success price-changed am-btn-xs am-radius" data-id="{{$v.id}}" data-url="{{:MyUrl('admin/goods/pricechanged')}}" id="doc-prompt-toggle{{$v.id}}" >{{$v.price}}</button>
-								<div class="am-modal am-modal-prompt" tabindex="-1" id="my-prompt{{$v.id}}">
-								  <div class="am-modal-dialog">
-								    <div class="am-modal-hd">{{$v.title}}</div>
-								    <div class="am-modal-bd">
-								      <img src="{{$v['images']}}" class="am-radius" style="width:100%"/>
-								      <input type="number" class="am-modal-prompt-input"  pattern="^([0-9]{1}\d{0,6})(\.\d{1,2})?$" data-validation-message="请填写有效的销售金额" placeholder="{{$v.price}}">元
-								    </div>
-								    <div class="am-modal-footer">
-								      <span class="am-modal-btn" data-am-modal-cancel>取消</span>
-								      <span class="am-modal-btn" data-am-modal-confirm>提交</span>
-								    </div>
-								  </div>
-								</div>
-								
-								{{if !empty($v['original_price']) and $v['original_price'] gt 0}}
-									<br /><span class="am-badge am-radius">原价 {{$v.original_price}}</span>
-								{{/if}}
-							</td>
+    <button class="am-btn am-btn-success price-changed am-btn-xs am-radius" data-id="{{$v.id}}" data-url="{{:MyUrl('admin/goods/pricechanged')}}" id="doc-prompt-toggle{{$v.id}}" >{{$v.price}}</button>
+    <div class="am-modal am-modal-prompt" tabindex="-1" id="my-prompt{{$v.id}}">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">{{$v.title}}</div>
+            <div class="am-modal-bd">
+                <img src="{{$v['images']}}" class="am-radius" style="width:100%"/>
+                <input type="number" class="am-modal-prompt-input"  pattern="^([0-9]{1}\d{0,6})(\.\d{1,2})?$" data-validation-message="请填写有效的销售金额" placeholder="{{$v.price}}">元
+            </div>
+            <div class="am-modal-footer">
+                <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+                <span class="am-modal-btn" data-am-modal-confirm>提交</span>
+            </div>
+        </div>
+    </div>
+
+    {{if !empty($v['original_price']) and $v['original_price'] gt 0}}
+    <br /><span class="am-badge am-radius">原价 {{$v.original_price}}</span>
+    {{/if}}
+</td>
 ```
 
 完整`index.html`代码链接：https://github.com/xieqifei/shopxo/blob/master/application/admin/view/default/goods/index.html
